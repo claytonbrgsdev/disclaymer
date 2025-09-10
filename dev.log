@@ -1,0 +1,13 @@
+
+> my-v0-project@0.1.0 dev /Users/claytonborges/Downloads/modern-portfolio
+> next dev
+
+  ▲ Next.js 14.2.16
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1539ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1469ms (516 modules)
+ GET / 200 in 1582ms
+ GET / 200 in 160ms

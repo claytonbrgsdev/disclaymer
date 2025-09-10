@@ -1,0 +1,482 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Minimal black and white design tokens */
+  --background: #ffffff; /* Main background color */
+  --foreground: #000000; /* Primary text color */
+  --card: #f9fafb; /* Card background */
+  --card-foreground: #4b5563; /* Card text color */
+  --popover: #ffffff; /* Popover background */
+  --popover-foreground: #000000; /* Popover text color */
+  --primary: #000000; /* Primary elements */
+  --primary-foreground: #ffffff; /* Primary text */
+  --secondary: #4b5563; /* Secondary elements */
+  --secondary-foreground: #ffffff; /* Secondary text */
+  --muted: #f9fafb; /* Muted elements */
+  --muted-foreground: #4b5563; /* Muted text */
+  --accent: #000000; /* Accent elements */
+  --accent-foreground: #ffffff; /* Accent text */
+  --destructive: #ff0000; /* Destructive actions */
+  --destructive-foreground: #ffffff; /* Destructive text */
+  --border: #e5e7eb; /* Border color */
+  --input: #f9fafb; /* Input background */
+  --ring: rgba(0, 0, 0, 0.1); /* Ring color */
+  --chart-1: #000000; /* Chart color 1 */
+  --chart-2: #4b5563; /* Chart color 2 */
+  --chart-3: #ffffff; /* Chart color 3 */
+  --chart-4: #000000; /* Chart color 4 */
+  --chart-5: #4b5563; /* Chart color 5 */
+  --radius: 0.5rem; /* Corner rounding */
+  --sidebar: #ffffff; /* Sidebar background */
+  --sidebar-foreground: #000000; /* Sidebar text color */
+  --sidebar-primary: #4b5563; /* Sidebar primary elements */
+  --sidebar-primary-foreground: #ffffff; /* Sidebar primary text */
+  --sidebar-accent: #000000; /* Sidebar accent elements */
+  --sidebar-accent-foreground: #ffffff; /* Sidebar accent text */
+  --sidebar-border: #e5e7eb; /* Sidebar border */
+  --sidebar-ring: rgba(0, 0, 0, 0.1); /* Sidebar ring color */
+}
+
+.dark {
+  /* Dark mode with inverted minimal palette */
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #e5e7eb;
+  --popover: #000000;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --secondary: #4b5563;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1a1a;
+  --muted-foreground: #9ca3af;
+  --accent: #ffffff;
+  --accent-foreground: #000000;
+  --destructive: #ff0000;
+  --destructive-foreground: #ffffff;
+  --border: #374151;
+  --input: #1a1a1a;
+  --ring: rgba(255, 255, 255, 0.1);
+  --chart-1: #ffffff;
+  --chart-2: #9ca3af;
+  --chart-3: #000000;
+  --chart-4: #ffffff;
+  --chart-5: #4b5563;
+  --sidebar: #000000;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #4b5563;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ffffff;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #374151;
+  --sidebar-ring: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Architectural movement animations */
+@keyframes radiate {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flow-up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes expand-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes beam-spread {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Adding scroll-triggered animations and spring effects */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-up {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spring-up {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem) scale(0.95);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-0.5rem) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes parallax-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Art Deco inspired elements */
+.radiate-pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.radiate-pattern::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    var(--muted) 1deg,
+    transparent 2deg,
+    transparent 10deg,
+    var(--muted) 11deg,
+    transparent 12deg,
+    transparent 20deg,
+    var(--muted) 21deg,
+    transparent 22deg,
+    transparent 30deg,
+    var(--muted) 31deg,
+    transparent 32deg
+  );
+  transform: translate(-50%, -50%);
+  animation: radiate 20s linear infinite;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.mandala-bg {
+  position: relative;
+}
+
+.mandala-bg::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  animation: expand-center 2s ease-out;
+}
+
+.architectural-flow {
+  position: relative;
+  overflow: hidden;
+}
+
+.architectural-flow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+  transform: translateX(-50%);
+  animation: flow-up 3s ease-out;
+}
+
+/* Typography contrast classes */
+.text-massive {
+  font-size: clamp(4rem, 12vw, 12rem);
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+}
+
+.text-tiny {
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.text-huge-thin {
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 100;
+  line-height: 0.9;
+  letter-spacing: 0.1em;
+}
+
+.text-small-bold {
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Beam effects inspired by the sword image */
+.beam-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.beam {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  animation: beam-spread 2s ease-out;
+}
+
+.beam-vertical {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+  animation: beam-spread 2s ease-out;
+}
+
+/* Flowing elements inspired by fountain image */
+.flow-element {
+  position: relative;
+}
+
+.flow-element::before,
+.flow-element::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: var(--border);
+  top: 50%;
+  animation: flow-up 2s ease-out;
+}
+
+.flow-element::before {
+  left: -120px;
+  transform: rotate(-30deg);
+}
+
+.flow-element::after {
+  right: -120px;
+  transform: rotate(30deg);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .text-massive {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+  }
+
+  .text-huge-thin {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+/* Animation utility classes */
+.animate-fade-up {
+  animation: fade-up 1s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slide-left 1s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slide-right 1s ease-out forwards;
+}
+
+.animate-scale-up {
+  animation: scale-up 0.8s ease-out forwards;
+}
+
+.animate-spring-up {
+  animation: spring-up 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-parallax-float {
+  animation: parallax-float 6s ease-in-out infinite;
+}
+
+/* Enhanced hover transitions */
+.transition-spring {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Staggered animation delays */
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+.stagger-5 {
+  animation-delay: 0.5s;
+}
