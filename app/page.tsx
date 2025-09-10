@@ -145,6 +145,7 @@ const dashboards = [
 export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -309,14 +310,14 @@ export default function Portfolio() {
                       <Dialog>
                         <DialogTrigger asChild>
                           <img
-                            src={project.image || "/placeholder.svg"}
+                            src={`${basePath}${project.image || "/placeholder.svg"}`}
                             alt={project.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-spring cursor-pointer"
                           />
                         </DialogTrigger>
                         <DialogContent className="max-w-5xl p-0" showCloseButton>
                           <img
-                            src={project.image || "/placeholder.svg"}
+                            src={`${basePath}${project.image || "/placeholder.svg"}`}
                             alt={project.title}
                             className="w-full h-auto"
                           />
@@ -391,14 +392,14 @@ export default function Portfolio() {
                       <Dialog>
                         <DialogTrigger asChild>
                           <img
-                            src={dashboard.image || "/placeholder.svg"}
+                            src={`${basePath}${dashboard.image || "/placeholder.svg"}`}
                             alt={dashboard.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-spring cursor-pointer"
                           />
                         </DialogTrigger>
                         <DialogContent className="max-w-6xl p-0" showCloseButton>
                           <img
-                            src={dashboard.image || "/placeholder.svg"}
+                            src={`${basePath}${dashboard.image || "/placeholder.svg"}`}
                             alt={dashboard.title}
                             className="w-full h-auto"
                           />
