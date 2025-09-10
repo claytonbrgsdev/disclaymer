@@ -21,10 +21,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
+      - name: Setup pnpm (use version from package.json)
         uses: pnpm/action-setup@v4
         with:
-          version: 10.15.1
+          # No explicit version to avoid conflict with package.json's packageManager
+          run_install: false
 
       - name: Setup Node.js (cache pnpm)
         uses: actions/setup-node@v4
