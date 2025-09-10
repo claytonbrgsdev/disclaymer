@@ -2,7 +2,7 @@
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
-name: Deploy Next.js site to Pages
+name: (disabled) Deploy Next.js site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -29,8 +29,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Skip legacy workflow
+        run: echo "This legacy workflow is disabled. Use deploy.yml."
+        shell: bash
+        if: ${{ false }}
       - name: Detect package manager
         id: detect-package-manager
         run: |

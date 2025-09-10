@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: (disabled) Deploy to GitHub Pages
 
 on:
   push:
@@ -18,8 +18,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Skip legacy workflow
+        run: echo "This legacy workflow is disabled. Use deploy.yml."
+        shell: bash
+        if: ${{ false }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -51,8 +53,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Skip deploy
+        run: echo "Disabled"
+        shell: bash
+        if: ${{ false }}
 
 
