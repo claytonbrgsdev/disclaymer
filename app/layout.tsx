@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://claytonbrgsdev.github.io/disclaymer"),
   title: "DISCLAYMER",
   description:
-    "no claims, only commits. tests before promises. versioned change. reliable deploys.",
+    "no pitch, only product.",
   openGraph: {
     title: "DISCLAYMER",
     description:
-      "no claims, only commits. tests before promises. versioned change. reliable deploys.",
+      "no pitch, only product.",
     url: "https://claytonbrgsdev.github.io/disclaymer/",
     siteName: "DISCLAYMER",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DISCLAYMER",
     description:
-      "no claims, only commits. tests before promises. versioned change. reliable deploys.",
+      "no pitch, only product.",
     images: ["/thumbnail-transparent.png"],
   }
 }
