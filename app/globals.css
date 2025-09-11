@@ -132,6 +132,13 @@
     font-size: 2rem;
     line-height: 1.1;
   }
+  /* Section pre-title smaller on mobile */
+  .text-small-bold,
+  .text-small,
+  .text-tiny {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.15em;
+  }
 }
 
 /* Architectural movement animations */

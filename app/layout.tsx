@@ -6,6 +6,7 @@ import "./globals.css"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { ThemeToggle } from "../components/theme-toggle"
+import MobileNav from "../components/mobile-nav"
 
 const geistSans = GeistSans
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "DISCLAYMER",
     images: [
       {
-        url: "/project-asaplayer.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "DISCLAYMER",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     title: "DISCLAYMER",
     description:
       "no claims, only commits. tests before promises. versioned change. reliable deploys.",
-    images: ["/project-asaplayer.png"],
+    images: ["/og.png"],
   }
 }
 
@@ -61,7 +62,7 @@ export default function RootLayout({
                   </span>
                 </div>
               </div>
-              <div className="flex space-x-8 items-center">
+              <div className="hidden md:flex space-x-8 items-center">
                 <a
                   href="#about"
                   className="text-xs font-bold uppercase tracking-wider hover:text-primary transition-colors"
@@ -81,6 +82,10 @@ export default function RootLayout({
                   CONTACT
                 </a>
                 <ThemeToggle />
+              </div>
+              <div className="flex md:hidden items-center">
+                <ThemeToggle />
+                <MobileNav />
               </div>
             </div>
           </div>
