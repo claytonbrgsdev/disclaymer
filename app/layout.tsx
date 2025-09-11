@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "DISCLAYMER",
     images: [
       {
-        url: "/thumbnail.png",
+        url: "/thumbnail-transparent.png",
         width: 1200,
         height: 630,
         alt: "DISCLAYMER",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "DISCLAYMER",
     description:
       "no claims, only commits. tests before promises. versioned change. reliable deploys.",
-    images: ["/thumbnail.png"],
+    images: ["/thumbnail-transparent.png"],
   }
 }
 
