@@ -9,14 +9,14 @@ export default function MobileNav() {
     <a
       href={href}
       onClick={() => setOpen(false)}
-      className="block px-4 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-muted"
+      className="block px-3 py-2 text-xs font-semibold tracking-wider uppercase hover:bg-muted rounded"
     >
       {label}
     </a>
   )
 
   return (
-    <div className="md:hidden ml-2">
+    <div className="relative md:hidden ml-2">
       <button
         aria-label="Open menu"
         onClick={() => setOpen((v) => !v)}
@@ -29,7 +29,7 @@ export default function MobileNav() {
         </svg>
       </button>
       {open && (
-        <div className="absolute right-4 top-16 z-[60] w-56 rounded border bg-background shadow-xl">
+        <div className="absolute right-0 top-12 z-[60] min-w-[9rem] rounded-md border bg-background/95 backdrop-blur p-1 shadow-md">
           <Item href="#about" label="About" />
           <Item href="#projects" label="Projects" />
           <Item href="#contact" label="Contact" />

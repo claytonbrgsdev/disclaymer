@@ -178,7 +178,7 @@ export default function Portfolio() {
             </div>
 
             <ScrollObserver animation="fade-up" delay={600} className="max-w-5xl mx-auto space-y-6 flow-element">
-            <h2 className="text-small-bold text-muted-foreground mb-4">ain't nobody got time for intros so let's make this quick</h2>
+            <h2 className="text-small-bold text-muted-foreground mb-4">a quick intro</h2>
               <h2 className="text-massive font-black leading-none">ABOUT</h2>
               <p className="text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
                 two full-stack developers shipping modern web apps and unusual digital products.<br />
