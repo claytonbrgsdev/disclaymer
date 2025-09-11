@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import BlobLava from "@/components/blob-hero"
 import { ScrollObserver } from "@/components/scroll-observer"
 import { Github, ExternalLink, Mail, ArrowRight, Instagram } from "lucide-react"
 
@@ -164,44 +165,39 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Blob behind about section */}
       <section id="about" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24">
-        <div className="max-w-6xl mx-auto px-8 text-center">
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <BlobLava className="w-screen h-screen" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto px-8 text-center">
           <ScrollObserver animation="spring-up" className="space-y-12">
             <div className="architectural-flow border-0">
               <ScrollObserver animation="slide-right" delay={200}><div /></ScrollObserver>
               <ScrollObserver animation="scale-up" delay={400}><div /></ScrollObserver>
             </div>
 
-            <ScrollObserver animation="fade-up" delay={600} className="max-w-4xl mx-auto space-y-10 flow-element">
-              <div className="space-y-8">
-                <h4 className="leading-tight text-justify font-extrabold text-4xl">
-                  WE ARE DISCLAYMER.{" "}
-                  <span className="text-xl md:text-2xl leading-tight text-justify font-light tracking-normal">
-                    no pitch, only product.
-                  </span>
-                </h4>
-                <p className="text-base md:text-lg font-light leading-relaxed text-right">
-                  two full-stack developers shipping modern web apps and unusual digital products.
-                </p>
-                <p className="text-sm md:text-base leading-relaxed text-right">
-                  we build end-to-end: product thinking, interface design, and full-stack engineering.
-                  <br />
-                  small team, senior output. from idea to production with short cycles and measurable results.
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed italic text-right">
-                  our principles: no claims, only commits. tests before promises. versioned change. reliable deploys.
-                </p>
-              </div>
+            <ScrollObserver animation="fade-up" delay={600} className="max-w-5xl mx-auto space-y-6 flow-element">
+            <h2 className="text-small-bold text-muted-foreground mb-4">LET US INTRODUCE OURSELVES</h2>
+              <h2 className="text-massive font-black leading-none">ABOUT</h2>
+              <p className="text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
+                two full-stack developers shipping modern web apps and unusual digital products.<br />
+                we build end-to-end: product thinking, interface design, and full-stack engineering.<br />
+                small team, senior output. from idea to production with short cycles and measurable results.
+              </p>
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed italic">
+                our principles: no claims, only commits. tests before promises. versioned change. reliable deploys.
+              </p>
             </ScrollObserver>
 
             <ScrollObserver animation="fade-up" delay={800} className="max-w-4xl mx-auto">
-              <div className="space-y-8 my-24">
+              <div className="space-y-8 my-16">
                 <h4 className="text-lg md:text-xl font-extrabold">SERVICES</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm md:text-base">
                   <div className="text-center md:text-center">suspiciously good design</div>
-                  <div className="text-center md:text-center">api backstage passes</div>
-                  <div className="text-center md:text-center">artificial intelligence</div>
-                  <div className="text-center md:text-center">user hugging experience </div>
+                  <div className="text-center md:text-center">backend vip access</div>
+                  <div className="text-center md:text-center">super artificial intelligence</div>
+                  <div className="text-center md:text-center">relaxing user experience </div>
                   <div className="text-center md:text-center">data with receipts</div>
                   <div className="text-center md:text-center">unusual softwares</div>
                   <div className="col-span-1 md:col-span-2 text-center md:text-left">
@@ -212,18 +208,17 @@ export default function Portfolio() {
             </ScrollObserver>
 
             <ScrollObserver animation="fade-up" delay={1000} className="max-w-4xl mx-auto">
-              <div className="space-y-8 my-24">
+              <div className="space-y-8 my-16">
                 <h4 className="text-lg md:text-xl font-extrabold">PROCESS</h4>
                 <div className="space-y-3 text-sm md:text-base leading-relaxed">
-                  <p>scope fast. prototype early.</p>
-                  <p>ship small. learn from users.</p>
-                  <p>iterate. harden. scale.</p>
+                  <p>scope fast. prototype early. ship small.</p>
+                  <p>learn from users. iterate. harden. scale.</p>
                 </div>
               </div>
             </ScrollObserver>
 
-            <ScrollObserver animation="fade-up" delay={1200} className="max-w-5xl mx-auto">
-              <div className="space-y-8 my-24">
+            <ScrollObserver animation="fade-up" delay={1200} className="max-w-4xl mx-auto">
+              <div className="space-y-8 my-16">
                 <h4 className="text-lg md:text-xl font-extrabold">TECH WE LIKE</h4>
                 <div className="flex flex-wrap gap-3 justify-center text-xs md:text-sm">
                   {[
@@ -236,7 +231,7 @@ export default function Portfolio() {
                     "aws",
                     "docker",
                     "github",
-                    "sql",
+                    "ux design",
                     "threejs",
                     "n8n",
                     "metabase",
@@ -291,7 +286,7 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-6">
           <ScrollObserver animation="spring-up" className="text-center mb-20">
             <h2 className="text-small-bold text-muted-foreground mb-4">some cool stuff below</h2>
-            <h3 className="text-massive font-black leading-none mb-8">OUR WORK</h3>
+            <h3 className="text-massive font-black leading-none mb-8">PORTFOLIO</h3>
             <p className="text-tiny uppercase tracking-widest max-w-2xl mx-auto">
               selected work across frontend, backend, and experiments.
             </p>
@@ -315,11 +310,11 @@ export default function Portfolio() {
                             className="w-full h-full object-cover group-hover:scale-105 transition-spring cursor-pointer"
                           />
                         </DialogTrigger>
-                        <DialogContent className="max-w-5xl p-0" showCloseButton>
+                        <DialogContent className="max-w-[96vw] max-h-[96vh] p-0" showCloseButton>
                           <img
                             src={`${basePath}${project.image || "/placeholder.svg"}`}
                             alt={project.title}
-                            className="w-full h-auto"
+                            className="w-auto max-w-full h-auto max-h-[90vh] object-contain"
                           />
                         </DialogContent>
                       </Dialog>
@@ -397,11 +392,11 @@ export default function Portfolio() {
                             className="w-full h-full object-cover group-hover:scale-105 transition-spring cursor-pointer"
                           />
                         </DialogTrigger>
-                        <DialogContent className="max-w-6xl p-0" showCloseButton>
+                        <DialogContent className="max-w-[96vw] max-h-[96vh] p-0" showCloseButton>
                           <img
                             src={`${basePath}${dashboard.image || "/placeholder.svg"}`}
                             alt={dashboard.title}
-                            className="w-full h-auto"
+                            className="w-auto max-w-full h-auto max-h-[90vh] object-contain"
                           />
                         </DialogContent>
                       </Dialog>

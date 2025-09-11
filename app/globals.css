@@ -126,6 +126,14 @@
   }
 }
 
+/* Mobile: scale down nav title to avoid overflow */
+@media (max-width: 640px) {
+  nav h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+}
+
 /* Architectural movement animations */
 @keyframes radiate {
   0% {

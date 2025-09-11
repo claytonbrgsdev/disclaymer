@@ -12,9 +12,32 @@ const geistSans = GeistSans
 const geistMono = GeistMono
 
 export const metadata: Metadata = {
-  title: "DISCLAYMER - Architectural Portfolio",
-  description: "We are Disclaymer — a two-person development team building thoughtful software and digital products.",
-  generator: "v0.app",
+  title: "DISCLAYMER",
+  description:
+    "no claims, only commits. tests before promises. versioned change. reliable deploys.",
+  openGraph: {
+    title: "DISCLAYMER",
+    description:
+      "no claims, only commits. tests before promises. versioned change. reliable deploys.",
+    url: "https://claytonbrgsdev.github.io/disclaymer/",
+    siteName: "DISCLAYMER",
+    images: [
+      {
+        url: "/project-asaplayer.png",
+        width: 1200,
+        height: 630,
+        alt: "DISCLAYMER",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DISCLAYMER",
+    description:
+      "no claims, only commits. tests before promises. versioned change. reliable deploys.",
+    images: ["/project-asaplayer.png"],
+  }
 }
 
 export default function RootLayout({
@@ -29,9 +52,14 @@ export default function RootLayout({
           <div className="max-w-none mx-auto px-8 py-6">
             <div className="flex justify-between items-center">
               <div className="architectural-flow flex-shrink-0 pr-8">
-                <h1 className="text-6xl md:text-8xl font-black tracking-tighter italic whitespace-nowrap">
-                  DISCLAYMER
-                </h1>
+                <div className="flex items-baseline gap-3">
+                  <h1 className="text-6xl md:text-8xl font-black tracking-tighter italic whitespace-nowrap">
+                    DISCLAYMER
+                  </h1>
+                  <span className="hidden sm:inline text-sm font-normal whitespace-nowrap italic not-italic:!">
+                    no pitch, only product.
+                  </span>
+                </div>
               </div>
               <div className="flex space-x-8 items-center">
                 <a
