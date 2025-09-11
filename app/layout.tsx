@@ -13,6 +13,7 @@ const geistSans = GeistSans
 const geistMono = GeistMono
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://claytonbrgsdev.github.io/disclaymer"),
   title: "DISCLAYMER",
   description:
     "no claims, only commits. tests before promises. versioned change. reliable deploys.",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "DISCLAYMER",
     images: [
       {
-        url: "/og.png",
+        url: "/thumbnail.png",
         width: 1200,
         height: 630,
         alt: "DISCLAYMER",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     title: "DISCLAYMER",
     description:
       "no claims, only commits. tests before promises. versioned change. reliable deploys.",
-    images: ["/og.png"],
+    images: ["/thumbnail.png"],
   }
 }
 

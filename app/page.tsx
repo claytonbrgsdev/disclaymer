@@ -178,7 +178,7 @@ export default function Portfolio() {
             </div>
 
             <ScrollObserver animation="fade-up" delay={600} className="max-w-5xl mx-auto space-y-6 flow-element">
-            <h2 className="text-small-bold text-muted-foreground mb-4">a quick intro</h2>
+            {/* <h2 className="text-small-bold text-muted-foreground mb-4">a quick intro</h2>
               <h2 className="text-massive font-black leading-none">ABOUT</h2>
               <p className="text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
                 two full-stack developers shipping modern web apps and unusual digital products.<br />
@@ -187,11 +187,11 @@ export default function Portfolio() {
               </p>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed italic">
                 our principles: no claims, only commits. tests before promises. versioned change. reliable deploys.
-              </p>
+              </p> */}
             </ScrollObserver>
 
             <ScrollObserver animation="fade-up" delay={800} className="max-w-4xl mx-auto">
-              <div className="space-y-8 my-16">
+              {/* <div className="space-y-8 my-16">
                 <h4 className="text-lg md:text-xl font-extrabold">SERVICES</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm md:text-base">
                   <div className="text-center md:text-center">suspiciously good design</div>
@@ -204,21 +204,21 @@ export default function Portfolio() {
                   
                   </div>
                 </div>
-              </div>
+              </div> */}
             </ScrollObserver>
 
             <ScrollObserver animation="fade-up" delay={1000} className="max-w-4xl mx-auto">
-              <div className="space-y-8 my-16">
+              {/* <div className="space-y-8 my-16">
                 <h4 className="text-lg md:text-xl font-extrabold">PROCESS</h4>
                 <div className="space-y-3 text-sm md:text-base leading-relaxed">
                   <p>scope fast. prototype early. ship small.</p>
                   <p>learn from users. iterate. harden. scale.</p>
                 </div>
-              </div>
+              </div> */}
             </ScrollObserver>
 
             <ScrollObserver animation="fade-up" delay={1200} className="max-w-4xl mx-auto">
-              <div className="space-y-8 my-16">
+              {/* <div className="space-y-8 my-16">
                 <h4 className="text-lg md:text-xl font-extrabold">TECH WE LIKE</h4>
                 <div className="flex flex-wrap gap-3 justify-center text-xs md:text-sm">
                   {[
@@ -246,7 +246,7 @@ export default function Portfolio() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </ScrollObserver>
 
             <ScrollObserver
