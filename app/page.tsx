@@ -10,7 +10,7 @@ import { Github, ExternalLink, Mail, ArrowRight, Instagram } from "lucide-react"
 
 const projects = [
   {
-    title: "ASA Player - Spectrum Analyzer",
+    title: "ASA Player",
     description:
       "retro-styled web music player with built-in ascii spectrum analyzer",
     image: "/project-asaplayer.png",
@@ -68,7 +68,7 @@ const projects = [
     year: "2025",
   },
   {
-    title: "REACTO - Sound Visualizations",
+    title: "REACTO",
     description:
       "web audio visual experiments and demos with tweakable parameters",
     image: "/project-reacto.png",
@@ -178,7 +178,7 @@ export default function Portfolio() {
             </div>
 
             <ScrollObserver animation="fade-up" delay={600} className="max-w-5xl mx-auto space-y-6 flow-element">
-            <h2 className="text-small-bold text-muted-foreground mb-4">LET US INTRODUCE OURSELVES</h2>
+            <h2 className="text-small-bold text-muted-foreground mb-4">ain't nobody got time for big intros</h2>
               <h2 className="text-massive font-black leading-none">ABOUT</h2>
               <p className="text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
                 two full-stack developers shipping modern web apps and unusual digital products.<br />
@@ -285,7 +285,7 @@ export default function Portfolio() {
       <section id="projects" className="architectural-flow py-0">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollObserver animation="spring-up" className="text-center mb-20">
-            <h2 className="text-small-bold text-muted-foreground mb-4">some cool stuff below</h2>
+            <h2 className="text-small-bold text-muted-foreground mb-4">some weird things we've created</h2>
             <h3 className="text-massive font-black leading-none mb-8">PORTFOLIO</h3>
             <p className="text-tiny uppercase tracking-widest max-w-2xl mx-auto">
               selected work across frontend, backend, and experiments.
@@ -310,11 +310,11 @@ export default function Portfolio() {
                             className="w-full h-full object-cover group-hover:scale-105 transition-spring cursor-pointer"
                           />
                         </DialogTrigger>
-                        <DialogContent className="max-w-[96vw] max-h-[96vh] p-0" showCloseButton>
+                        <DialogContent bare className="max-w-[98vw] max-h-[98vh] p-0" showCloseButton>
                           <img
                             src={`${basePath}${project.image || "/placeholder.svg"}`}
                             alt={project.title}
-                            className="w-auto max-w-full h-auto max-h-[90vh] object-contain"
+                            className="w-auto max-w-[98vw] h-auto max-h-[95vh] object-contain"
                           />
                         </DialogContent>
                       </Dialog>
@@ -392,11 +392,11 @@ export default function Portfolio() {
                             className="w-full h-full object-cover group-hover:scale-105 transition-spring cursor-pointer"
                           />
                         </DialogTrigger>
-                        <DialogContent className="max-w-[96vw] max-h-[96vh] p-0" showCloseButton>
+                        <DialogContent bare className="max-w-[98vw] max-h-[98vh] p-0" showCloseButton>
                           <img
                             src={`${basePath}${dashboard.image || "/placeholder.svg"}`}
                             alt={dashboard.title}
-                            className="w-auto max-w-full h-auto max-h-[90vh] object-contain"
+                            className="w-auto max-w-[98vw] h-auto max-h-[95vh] object-contain"
                           />
                         </DialogContent>
                       </Dialog>
@@ -437,7 +437,7 @@ export default function Portfolio() {
           <ScrollObserver animation="spring-up" className="space-y-12">
             <div>
               <ScrollObserver animation="fade-in" delay={100}>
-                <h2 className="text-small-bold text-muted-foreground mb-4">come say hi</h2>
+                <h2 className="text-small-bold text-muted-foreground mb-4">don't be shy and come say hello</h2>
               </ScrollObserver>
               <ScrollObserver animation="scale-up" delay={200}>
                 <h3 className="text-massive font-black leading-none mb-16">CONTACT</h3>
