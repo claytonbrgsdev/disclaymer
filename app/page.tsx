@@ -196,7 +196,7 @@ export default function Portfolio() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm md:text-base">
                   <div className="text-center md:text-center">suspiciously good design</div>
                   <div className="text-center md:text-center">backend vip access</div>
-                  <div className="text-center md:text-center">super artificial intelligence</div>
+                  <div className="text-center md:text-center">superficial intelligence</div>
                   <div className="text-center md:text-center">relaxing user experience </div>
                   <div className="text-center md:text-center">data with receipts</div>
                   <div className="text-center md:text-center">unusual softwares</div>
