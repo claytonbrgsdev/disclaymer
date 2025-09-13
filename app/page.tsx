@@ -467,7 +467,7 @@ export default function Portfolio() {
                           <Instagram className="w-4 h-4" />
                         </a>
                       </h4>
-                      <p className="text-sm text-muted-foreground">claytonborgesdev@gmail.com</p>
+                      <p className="text-sm text-muted-foreground">contact@disclaymer.com</p>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2 flex items-center justify-center gap-2">
@@ -491,7 +491,7 @@ export default function Portfolio() {
                           <Instagram className="w-4 h-4" />
                         </a>
                       </h4>
-                      <p className="text-sm text-muted-foreground">raphaelpalmer42@gmail.com</p>
+                      <p className="text-sm text-muted-foreground">contact@disclaymer.com</p>
                     </div>
                   </div>
                 </div>
