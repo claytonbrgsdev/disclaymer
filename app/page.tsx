@@ -96,6 +96,33 @@ const projects = [
     tags: ["Three.js", "GLSL", "WebGL"],
     year: "2025",
   },
+  {
+    title: "DSRPTV REC",
+    description:
+      "music platform with radio shows, artist catalog and playlist management",
+    image: "/project-dsrptv.jpeg",
+    liveUrl: "http://dsrptvrec.com",
+    tags: ["React", "Music Platform", "Radio", "Catalog"],
+    year: "2025",
+  },
+  {
+    title: "eStock Control",
+    description:
+      "inventory management system built with react + typescript + vite",
+    image: "/project-estock.jpeg",
+    githubUrl: "https://github.com/estock-dev/estock-control.git",
+    tags: ["React", "TypeScript", "Vite", "Inventory"],
+    year: "2025",
+  },
+  {
+    title: "EKO",
+    description:
+      "mystical ai chatbot with tarot reading capabilities and streamlit interface",
+    image: "/project-eko.png",
+    githubUrl: "https://github.com/drama-ai/chatbot",
+    tags: ["Python", "Streamlit", "AI", "Tarot"],
+    year: "2025",
+  },
 ]
 
 const dashboards = [
@@ -432,7 +459,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="contact" className="py-16 radiate-pattern">
+      <section id="contact" className="pt-16 radiate-pattern">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollObserver animation="spring-up" className="space-y-12">
             <div>
@@ -467,7 +494,6 @@ export default function Portfolio() {
                           <Instagram className="w-4 h-4" />
                         </a>
                       </h4>
-                      <p className="text-sm text-muted-foreground">contact@disclaymer.com</p>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2 flex items-center justify-center gap-2">
@@ -491,8 +517,10 @@ export default function Portfolio() {
                           <Instagram className="w-4 h-4" />
                         </a>
                       </h4>
-                      <p className="text-sm text-muted-foreground">contact@disclaymer.com</p>
                     </div>
+                  </div>
+                  <div className="text-center mt-12">
+                    <p className="text-sm text-muted-foreground">contact@disclaymer.com</p>
                   </div>
                 </div>
               </ScrollObserver>
@@ -502,7 +530,7 @@ export default function Portfolio() {
       </section>
 
       <ScrollObserver animation="fade-in">
-        <footer className="py-12 border-t border-border">
+        <footer className="pt-16 pb-8 border-t border-border">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <div className="text-tiny uppercase tracking-widest text-muted-foreground">
               © 2025 disclaymer — all rights reserved i guess
