@@ -24,8 +24,8 @@ const projects = [
     description:
       "three.js showroom with lighting controls and glb asset viewer",
     image: "/project-3dcar.png",
-    githubUrl: "https://github.com/claytonbrgsdev/product-showcase-v2",
-    liveUrl: "https://claytonbrgsdev.github.io/product-showcase-v2/",
+    githubUrl: "https://github.com/claytonbrgsdev/mz-prime",
+    liveUrl: "https://claytonbrgsdev.github.io/mz-prime/",
     tags: ["Three.js", "JavaScript", "GLB", "Shaders"],
     year: "2025",
   },
